@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.40629.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBlog.WebUI", "SimpleBlog.WebUI\SimpleBlog.WebUI.csproj", "{BEAFC63A-30B9-4C31-84B3-2AB7EB85C40E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBlog.Tests", "SimpleBlog.Tests\SimpleBlog.Tests.csproj", "{69625EB5-FDC7-459C-AB0C-87D416F2815F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBlog.DAL", "SimpleBlog.DAL\SimpleBlog.DAL.csproj", "{28AF06DB-BC03-483F-8B15-2015986F2838}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBlog.BLL", "SimpleBlog.BLL\SimpleBlog.BLL.csproj", "{2A0DCA32-C45E-49E9-810F-BE21D4D314F6}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://justz.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = SimpleBlog.BLL\\SimpleBlog.BLL.csproj
+		SccProjectName1 = SimpleBlog.BLL
+		SccLocalPath1 = SimpleBlog.BLL
+		SccProjectUniqueName2 = SimpleBlog.DAL\\SimpleBlog.DAL.csproj
+		SccProjectName2 = SimpleBlog.DAL
+		SccLocalPath2 = SimpleBlog.DAL
+		SccProjectUniqueName3 = SimpleBlog.Tests\\SimpleBlog.Tests.csproj
+		SccProjectName3 = SimpleBlog.Tests
+		SccLocalPath3 = SimpleBlog.Tests
+		SccProjectUniqueName4 = SimpleBlog.WebUI\\SimpleBlog.WebUI.csproj
+		SccProjectName4 = SimpleBlog.WebUI
+		SccLocalPath4 = SimpleBlog.WebUI
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEAFC63A-30B9-4C31-84B3-2AB7EB85C40E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEAFC63A-30B9-4C31-84B3-2AB7EB85C40E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEAFC63A-30B9-4C31-84B3-2AB7EB85C40E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEAFC63A-30B9-4C31-84B3-2AB7EB85C40E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69625EB5-FDC7-459C-AB0C-87D416F2815F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69625EB5-FDC7-459C-AB0C-87D416F2815F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69625EB5-FDC7-459C-AB0C-87D416F2815F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69625EB5-FDC7-459C-AB0C-87D416F2815F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28AF06DB-BC03-483F-8B15-2015986F2838}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AF06DB-BC03-483F-8B15-2015986F2838}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AF06DB-BC03-483F-8B15-2015986F2838}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AF06DB-BC03-483F-8B15-2015986F2838}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A0DCA32-C45E-49E9-810F-BE21D4D314F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A0DCA32-C45E-49E9-810F-BE21D4D314F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A0DCA32-C45E-49E9-810F-BE21D4D314F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A0DCA32-C45E-49E9-810F-BE21D4D314F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,44 @@
+﻿@model SimpleBlog.DAL.ViewModel.PostViewModel
+
+<div class="container-fluid" id="main-page-content">
+    <div class="col-md-8 col-xs-10 col-sm-10 col-md-offset-2 col-xs-offset-1 col-sm-offset-1">
+        <h1 class="post-entry-title" align="center">@Model.Title</h1>
+        <hr style="margin-bottom: 5px;" />
+        <p align="center" style="text-transform: uppercase;">Дата публикации <i class="fa fa-calendar-o"></i>: @Model.PublishDate.Date.ToString("dd-MM-yyyy") / Автор <i class="fa fa-user"></i>: Дмитрий Осин </p>
+        <hr style="margin-top: -7px;" />
+    </div>
+    <div class="col-md-8 col-xs-12 col-sm-12 col-md-offset-2 post-description">
+        <p class="text-justify">
+            @Html.Raw(Model.Description)
+        </p>
+
+        @if (User.Identity.IsAuthenticated)
+        {
+            @Html.ActionLink("Редактировать", "Edit", new { area = "Admin", controller = "PostManage", action = "Edit", id = Model.Id })
+        }
+    </div>
+</div>
+
+<div id="disqus-block" class="col-md-8 col-xs-10 col-sm-10 col-md-offset-2 col-xs-offset-1 col-sm-offset-1">
+    <div id="disqus_thread"></div>
+    <script>
+        /**
+        * RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+        * LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        var disqus_config = function() {
+            this.page.url = '@Request.Url.AbsoluteUri'; // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = @Model.Id; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+
+            s.src = '//dmitryosinblog.disqus.com/embed.js';
+
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <script id="dsq-count-scr" src="//dmitryosinblog.disqus.com/count.js" async></script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+</div>

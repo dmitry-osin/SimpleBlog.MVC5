@@ -1,0 +1,530 @@
+﻿// Global Variables
+
+@mainColor: #7d7878; // Light Brown
+@mainColor2: #5a5858; // Brown
+@mainColor3: white; // White
+@mainColor4: #e7e7e7; // Grey
+@mainColor5: #53a1b8; // Blue
+
+@defaultFont: 'Ubuntu', sans-serif;
+
+/* Override Styles 
+    ---------------------*/
+
+.btn-primary {
+    background-color: #5a5858;
+}
+
+.navbar-nav > li > a {
+    color: @mainColor3;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:hover {
+        color: @mainColor3;
+    }
+}
+
+.navbar-nav > li {
+    &:hover {
+        background-color: @mainColor2;
+    }
+}
+
+.navbar-toggle {
+    background-color: @mainColor3;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: @mainColor3;
+    font-weight: bold;
+
+    &:hover {
+        color: @mainColor3;
+    }
+}
+
+.navbar-nav {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: @mainColor5;
+    color: @mainColor3;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    background-color: @mainColor;
+    color: @mainColor3;
+}
+
+.dropdown-menu > li > a {
+    background-color: @mainColor5;
+    color: @mainColor3;
+    font-size: 1.2em;
+
+    &:hover {
+        background-color: @mainColor;
+        color: @mainColor3;
+    }
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: @mainColor5;
+}
+
+.navbar-default .navbar-brand {
+    color: @mainColor3;
+    text-transform: uppercase;
+
+    &:hover {
+        color: @mainColor3;
+    }
+}
+
+.navbar-default .navbar-toggle .navbar-header {
+    border-color: @mainColor5;
+    color: @mainColor3;
+    background-color: @mainColor5;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: @mainColor3;
+    font-weight: bold;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    font-weight: bold;
+    background-color: #5a5858;
+    color: @mainColor3;
+}
+
+.navbar-default .navbar-nav > li > a:active {
+    font-weight: bold;
+    background-color: #5a5858;
+}
+
+.navbar-default .navbar-nav > li > a:visited {
+    color: @mainColor3;
+    font-weight: bold;
+}
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00 !important;
+}
+
+.field-validation-valid {
+    display: none;
+    border: 1px solid #53a1b8 !important;
+    background-color: #53a1b8 !important;
+}
+
+.input-validation-error {
+    border: 1px solid #f00 !important;
+    background-color: #fee !important;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    font-size:1.6em;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+/* Override Styles End
+    ---------------------*/
+
+/* Main Styles 
+    --------------------- */
+
+body {
+    font-family: @defaultFont;
+    background-color: @mainColor4;
+    color: @mainColor2;
+    margin-bottom: 60px;
+    font-size: 18px;
+}
+
+#main-navigation-bar {
+    background-color: @mainColor5;
+    color: @mainColor3;
+}
+
+#main-page-header {
+    margin-top: 80px;
+}
+
+.it-badge-style {
+    color: @mainColor3;
+    font-size: 2em;
+    margin: 5px;
+    padding: 2px;
+    font-weight: bold;
+    padding: 0.2em;
+    -webkit-box-shadow: 0 2px 4px #000000;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0 2px 4px #000000;
+    -ms-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 4px #000000;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.badge-group {
+    margin-bottom: 30px;
+}
+
+.list-item {
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    background-color: transparent;
+    border: 0 solid;
+}
+
+.list-item > a {
+    font-size: 3em;
+    font-weight: bold;
+    padding: 10px;
+    color: @mainColor5;
+}
+
+.list-item > a > i {
+    -webkit-box-shadow: 0 0 7px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 7px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    color: @mainColor5;
+}
+
+.post-badge {
+    padding: 10px;
+    background-color: @mainColor5;
+    color: @mainColor3;
+    margin-top: 35px;
+    font-size: 2em;
+    -webkit-box-shadow: 0 0 7px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 7px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+
+    & > span {
+        font-size: 2em;
+    }
+}
+
+.post-entry-title {
+    color: @mainColor5;
+
+    & > h1, h2, h3, h4, h5, h6 {
+        color: @mainColor5;
+
+        &:hover {
+            color: darken(@mainColor5, 10%);
+        }
+    }
+}
+
+.post-entry {
+    margin-top: 30px;
+    padding: 10px;
+    -webkit-box-shadow: 0 0 7px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 7px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+}
+
+.slider-shadows, .image-shadows {
+    position: relative;
+    padding: 20px;
+    margin: 0 auto;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 7px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 7px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 8px #7d7878, inset 0 0 50px rgba(0, 0, 0, 0.1);
+
+    &:before, &:after {
+        position: absolute;
+        width: 40%;
+        height: 10px;
+        content: ' ';
+        left: 12px;
+        bottom: 12px;
+        background: transparent;
+        -webkit-transform: skew(-5deg) rotate(-5deg);
+        -moz-transform: skew(-5deg) rotate(-5deg);
+        -ms-transform: skew(-5deg) rotate(-5deg);
+        -o-transform: skew(-5deg) rotate(-5deg);
+        transform: skew(-5deg) rotate(-5deg);
+        -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+        z-index: -1;
+    }
+
+    &:after {
+        left: auto;
+        right: 12px;
+        -webkit-transform: skew(5deg) rotate(5deg);
+        -moz-transform: skew(5deg) rotate(5deg);
+        -ms-transform: skew(5deg) rotate(5deg);
+        -o-transform: skew(5deg) rotate(5deg);
+        transform: skew(5deg) rotate(5deg);
+    }
+}
+
+.image-shadows {
+    width: 80%;
+}
+
+.contact {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    align-self: center;
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    & > p {
+    }
+
+    & > a > i {
+        font-size: 2em;
+        text-shadow: 2px 2px 2px @mainColor2;
+    }
+
+    & > a {
+        color: @mainColor5;
+    }
+
+    & > a:hover {
+        color: @mainColor5;
+    }
+
+    & > a:visited {
+        color: @mainColor5;
+    }
+}
+
+hr {
+    color: @mainColor;
+    border: none;
+    border-top: 0 solid;
+    /* Убираем границу для браузера Firefox */
+    /* Цвет линии для остальных браузеров */
+    background-color: @mainColor;
+    /* Цвет линии для браузера Firefox и Opera */
+    height: 2px;
+    /* Толщина линии */
+}
+
+p.page-header {
+    font-size: 4em;
+    color: @mainColor;
+    font-weight: bold;
+    border-bottom: 0 solid #eee;
+}
+
+.fa-link-show {
+    color: @mainColor2;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+
+    &:before {
+        font-family: FontAwesome;
+        content: "\f0c1";
+        margin-right: 10px;
+        color: @mainColor2;
+        text-decoration: none;
+    }
+
+    &:hover {
+        color: @mainColor2;
+        text-decoration: underline;
+    }
+
+    &:active {
+        color: @mainColor2;
+        text-decoration: underline;
+    }
+
+    &:visited {
+        color: @mainColor2;
+        text-decoration: underline;
+    }
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.4em;
+}
+
+h1 {
+    font-size: 3.2em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    &:before {
+        font-family: FontAwesome;
+        content: "\f1dd";
+        margin-right: 10px;
+    }
+}
+
+h2 {
+    font-size: 3.0em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    &:before {
+        font-family: FontAwesome;
+        content: "\f1dd";
+        margin-right: 10px;
+    }
+}
+
+h3 {
+    font-size: 2.4em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+
+    &:before {
+        font-family: FontAwesome;
+        content: "\f1dd";
+        margin-right: 10px;
+    }
+}
+
+h4 {
+    font-size: 1.8em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+
+    &:before {
+        font-family: FontAwesome;
+        content: "\f1dd";
+        margin-right: 10px;
+    }
+}
+
+#main-page-content {
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+img.shadow {
+    width: 60%;
+    max-height: 280px;
+    max-width: 280px;
+    min-width: 280px;
+    padding: 0.6em;
+    -webkit-box-shadow: 0 1px 4px #000000;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    -ms-box-shadow: 0 1px 4px #000000;
+    -ms-box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+    box-shadow: 0 1px 4px #000000;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .3);
+}
+
+#disqus-block{
+    margin-top:20px;
+    margin-bottom:40px;
+}
+
+#post-description{
+    font-size: 1.4em;
+    font-weight: bold;
+    line-height: 1.4;
+
+    & > p, h1, h2, h3, h4, h5, h6 {
+        font-weight: bold;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+}
+
+/* Main Styles End
+    --------------------- */
+
+/* Sticky Footer Styles 
+    -------------------------*/
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 60px;
+    background-color: @mainColor2;
+}
+
+.text-muted {
+    color: @mainColor3;
+    font-weight: bold;
+}
+
+.container {
+    padding: 0 15px;
+}
+
+.container .text-muted {
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+#footer > p {
+    font-weight: bold;
+}
+
+/* Sticky Footer Styles 
+    -------------------------*/
+
+/* Dropdown Animation 
+    -----------------------*/
+
+.open > .dropdown-menu {
+    -webkit-transform: scale(1, 1);
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 1;
+}
+
+.dropdown-menu {
+    opacity: .3;
+    -webkit-transform-origin: top;
+    -moz-transform-origin: top;
+    -ms-transform-origin: top;
+    -o-transform-origin: top;
+    transform-origin: top;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    -o-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-transform: scale(1, 0);
+    -moz-transform: scale(1, 0);
+    -ms-transform: scale(1, 0);
+    -o-transform: scale(1, 0);
+    transform: scale(1, 0);
+    display: block;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+/* Dropdown Animation End
+    -----------------------*/
+

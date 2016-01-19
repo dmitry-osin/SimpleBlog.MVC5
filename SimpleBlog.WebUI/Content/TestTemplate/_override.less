@@ -1,0 +1,79 @@
+﻿@import "_variables.less";
+
+// nav-bar
+
+.navbar-default {
+    background-color: @mainColor5;
+    color: @mainColor3;
+    font-size: medium;
+    font-weight: 600;
+    text-transform:uppercase;
+    border-bottom:3px solid darken(@mainColor5, 8%);
+}
+
+.navbar-default .navbar-brand {
+    color: @mainColor3;
+
+    & > a:hover {
+        color: @mainColor3;
+    }
+}
+
+.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
+    color: @mainColor3;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: @mainColor3;
+
+    &:hover {
+        color: @mainColor3;
+        background-color: @mainColor;
+    }
+
+    &:active {
+        color: @mainColor3;
+        background-color: @mainColor;
+    }
+
+    &:visited {
+        color: @mainColor3;
+        background-color: @mainColor;
+    }
+}
+
+.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle{
+    background-color:@mainColor3;
+}
+
+.modal-content{
+    background-color:@mainColor5;
+    color:@mainColor3;
+    font-weight:600;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:focus, .navbar-default .navbar-nav > .open > a:hover {
+    background-color: @mainColor;
+    color: @mainColor3;
+}
+
+.dropdown-menu > li > a {
+    background-color: @mainColor5;
+    color: @mainColor3;
+    font-size: medium;
+    font-weight: 600;
+}
+
+.dropdown-menu > li > a:hover {
+    background-color: @mainColor;
+    color: @mainColor3;
+}
+
+.navbar-nav > li > .dropdown-menu {
+    background-color: @mainColor5;
+    color: @mainColor3;
+}
+
+.page-header{
+    border:0 solid;
+}

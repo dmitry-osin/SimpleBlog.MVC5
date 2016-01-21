@@ -1,13 +1,14 @@
 ﻿@model IEnumerable<SimpleBlog.DAL.ViewModel.PostViewModel>
 
 @{
-    ViewBag.Title = "Posts";
+    ViewBag.Title = "Записи";
+    ViewBag.Description = "Записи";
 }
 
-<h2>Posts</h2>
+<h2>Записи</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Добавить запись", "Create")
 </p>
 <table class="table">
     <tr>
@@ -41,9 +42,9 @@
             @Html.DisplayFor(modelItem => item.PublishDate)
         </td>
         <td>
-            @Html.ActionLink("Редактировать", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Посмотреть", "Details", new { url=item.UrlSlug, controller = "Blog", area = "" }) |
-            @Html.ActionLink("Delete", "Remove", new { id=item.Id })
+            <a href="@Url.Action("Edit", "PostManage", new { id = item.Id })"><i class="fa fa-pencil"></i></a> 
+            <a href="@Url.Action("Details", "Blog", new { url = item.UrlSlug, controller = "Blog", area = "" })"><i class="fa fa-eye"></i></a> 
+            <a href="@Url.Action("Remove", "PostManage", new {id = item.Id})"><i class="fa fa-trash"></i></a>
         </td>
     </tr>
 }

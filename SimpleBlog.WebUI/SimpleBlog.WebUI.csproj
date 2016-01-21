@@ -221,6 +221,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Areas\Admin\Views\TagManage\Tags.cshtml" />
+    <Content Include="Areas\Admin\Views\Admin\Index.cshtml" />
     <None Include="Properties\PublishProfiles\Smarterasp.net.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
@@ -416,6 +417,7 @@
     <Compile Include="App_Start\SettingsProvider.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
     <Compile Include="Areas\Admin\Controllers\PostManageController.cs" />
     <Compile Include="Areas\Admin\Controllers\TagManageController.cs" />
     <Compile Include="Controllers\AccountController.cs" />

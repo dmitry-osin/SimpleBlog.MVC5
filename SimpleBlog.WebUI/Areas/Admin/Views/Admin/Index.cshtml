@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 align="center">Выберите раздел</h2>
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="row" align="center">
+    <div class="col-lg-3 col-lg-offset-1">
+        <a href="@Url.Action("Posts","PostManage")"><i style="font-size: 150px;" class="fa fa-sticky-note"></i></a>
+        <p>Записи</p>
+    </div>
+    <div class="col-lg-3">
+        <a href="@Url.Action("Tags","TagManage")"><i style="font-size: 150px;" class="fa fa-tag"></i></a>
+        <p>Теги</p>
+    </div>
+    <div class="col-lg-3">
+        <a href="#"><i style="font-size: 150px;" class="fa fa-cog"></i></a>
+        <p>Настройки</p>
+    </div>
+</div>
+

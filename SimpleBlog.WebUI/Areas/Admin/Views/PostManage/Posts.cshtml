@@ -6,9 +6,10 @@
 }
 
 <h2>Записи</h2>
-
+<br />
+<br />
 <p>
-    @Html.ActionLink("Добавить запись", "Create")
+    <i class="fa fa-plus"></i> @Html.ActionLink("Добавить запись", "Create")
 </p>
 <table class="table">
     <tr>
@@ -27,26 +28,33 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.UrlSlug)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.IsPublished)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.PublishDate)
-        </td>
-        <td>
-            <a href="@Url.Action("Edit", "PostManage", new { id = item.Id })"><i class="fa fa-pencil"></i></a> 
-            <a href="@Url.Action("Details", "Blog", new { url = item.UrlSlug, controller = "Blog", area = "" })"><i class="fa fa-eye"></i></a> 
-            <a href="@Url.Action("Remove", "PostManage", new {id = item.Id})"><i class="fa fa-trash"></i></a>
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UrlSlug)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsPublished)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublishDate)
+            </td>
+            <td>
+                <a href="@Url.Action("Edit", "PostManage", new {id = item.Id})"><i class="fa fa-pencil"></i></a>
+
+            </td>
+            <td>
+                <a href="@Url.Action("Details", "Blog", new {url = item.UrlSlug, controller = "Blog", area = ""})"><i class="fa fa-eye"></i></a>
+
+            </td>
+            <td>
+                <a href="@Url.Action("Remove", "PostManage", new {id = item.Id})"><i class="fa fa-trash"></i></a>
+            </td>
+        </tr>
+    }
 
 </table>

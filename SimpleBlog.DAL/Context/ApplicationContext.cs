@@ -35,5 +35,14 @@ namespace SimpleBlog.DAL.Context
         /// The tags.
         /// </value>
         public DbSet<Tag> Tags { get; set; }
+
+
+        /// <summary>
+        /// Gets or sets the settings.
+        /// </summary>
+        /// <value>
+        /// The settings.
+        /// </value>
+        public DbSet<Setting> Settings { get; set; }
     }
 }

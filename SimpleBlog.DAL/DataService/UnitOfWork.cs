@@ -12,6 +12,7 @@ namespace SimpleBlog.DAL.DataService
         private bool _disposed;
         private PostRepository _postRepository;
         private TagRepository _tagRepository;
+        private SettingRepository _settingRepository;
 
         /// <summary>
         /// Gets the data context.
@@ -42,6 +43,23 @@ namespace SimpleBlog.DAL.DataService
                 if (_postRepository == null)
                     _postRepository = new PostRepository(_context);
                 return _postRepository;
+            }
+        }
+
+
+        /// <summary>
+        /// Gets the settings.
+        /// </summary>
+        /// <value>
+        /// The settings.
+        /// </value>
+        public SettingRepository Settings
+        {
+            get
+            {
+                if (_settingRepository == null)
+                    _settingRepository = new SettingRepository(_context);
+                return _settingRepository;
             }
         }
 

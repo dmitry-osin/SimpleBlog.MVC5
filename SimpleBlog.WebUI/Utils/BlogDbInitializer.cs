@@ -6,7 +6,7 @@ using Microsoft.AspNet.Identity;
 using SimpleBlog.DAL.Context;
 using SimpleBlog.DAL.Object_Model;
 
-namespace SimpleBlog.DAL.Utils
+namespace SimpleBlog.WebUI.Utils
 {
     public class BlogDbInitializer : DropCreateDatabaseIfModelChanges<ApplicationContext>
     {
@@ -16,7 +16,10 @@ namespace SimpleBlog.DAL.Utils
         /// <param name="context">The context.</param>
         protected override void Seed(ApplicationContext context)
         {
-            InitDb(context);
+            if (SettingsProvider.IsInitDb)
+            {
+                InitDb(context);
+            }
             base.Seed(context);
         }
 
@@ -52,11 +55,11 @@ namespace SimpleBlog.DAL.Utils
             var passwordHash = new PasswordHasher();
             ApplicationUser user = new ApplicationUser()
             {
-                Email = "dmitry@osin.pw",
+                Email = SettingsProvider.DefaultUserEmail,
                 EmailConfirmed = true,
-                UserName = "justz",
-                FullName = "Дмитрий Осин",
-                PasswordHash = passwordHash.HashPassword("Lbvfnb1989"),
+                UserName = SettingsProvider.DefaultUser,
+                FullName = SettingsProvider.DefaultUserFullName,
+                PasswordHash = passwordHash.HashPassword(SettingsProvider.DefaultUserPassword),
                 SecurityStamp = Guid.NewGuid().ToString(),
                 Tags = new List<Tag>()
                 {

@@ -427,6 +427,7 @@
     <Compile Include="HtmlHelpers\PagingHelpers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Utils\BlogDbInitializer.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />

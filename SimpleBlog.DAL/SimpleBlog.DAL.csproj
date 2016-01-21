@@ -109,7 +109,6 @@
     <Compile Include="Repository\PostRepository.cs" />
     <Compile Include="Repository\SettingRepository.cs" />
     <Compile Include="Repository\TagRepository.cs" />
-    <Compile Include="Utils\BlogDbInitializer.cs" />
     <Compile Include="ViewModel\LoginViewModel.cs" />
     <Compile Include="ViewModel\PagingInfoViewModel.cs" />
     <Compile Include="ViewModel\PostsListViewModel.cs" />

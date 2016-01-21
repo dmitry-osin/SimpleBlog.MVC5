@@ -167,6 +167,7 @@
     <Content Include="Content\styles.min.css">
       <DependentUpon>styles.css</DependentUpon>
     </Content>
+    <Content Include="Content\TestTemplate\Admin.html" />
     <Content Include="Content\TestTemplate\Posts.html" />
     <Content Include="Content\TestTemplate\styles.css">
       <DependentUpon>styles.less</DependentUpon>
@@ -443,6 +444,7 @@
       <DependentUpon>prism.min.js</DependentUpon>
     </Content>
     <Content Include="Views\Blog\Search.cshtml" />
+    <Content Include="Settings.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

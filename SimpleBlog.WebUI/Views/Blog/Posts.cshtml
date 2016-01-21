@@ -1,4 +1,5 @@
-﻿@using SimpleBlog.WebUI.HtmlHelpers
+﻿@using System.Configuration
+@using SimpleBlog.WebUI.HtmlHelpers
 @model SimpleBlog.DAL.ViewModel.PostsListViewModel
 
 <!--Main Content-->
@@ -11,7 +12,7 @@
                     <h1 align="center">@post.Title</h1>
                 </a>
                 <hr style="margin-bottom: 5px;"/>
-                <p align="center" style="text-transform: uppercase;">Дата публикации <i class="fa fa-calendar-o"></i>: @post.PublishDate.Date.ToString("dd-MM-yyyy") / Автор <i class="fa fa-user"></i>: Дмитрий Осин
+                <p align="center" style="text-transform: uppercase;">Дата публикации <i class="fa fa-calendar-o"></i>: @post.PublishDate.Date.ToString(SettingsPreloader.DateFormat) / Автор <i class="fa fa-user"></i>: Дмитрий Осин
                 </p>
                 <hr style="margin-top: -7px;"/>
             </div>

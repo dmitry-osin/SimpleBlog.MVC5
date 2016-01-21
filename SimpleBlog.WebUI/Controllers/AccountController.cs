@@ -60,7 +60,7 @@ namespace SimpleBlog.WebUI.Controllers
                     AuthenticationManager.SignIn(new AuthenticationProperties
                     {
                         IsPersistent = model.RememberMe,
-                        ExpiresUtc = DateTimeOffset.Now + new TimeSpan(0,0,SettingsPreloader.PersistenceTimeOfAuth,0)
+                        ExpiresUtc = DateTimeOffset.Now + new TimeSpan(0,0,SettingsProvider.PersistenceTimeOfAuth,0)
                     }, claim);
                     if (String.IsNullOrEmpty(returnUrl))
                         return RedirectToAction("AboutMe", "Home");

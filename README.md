@@ -16,6 +16,7 @@
 - TinyMCE Editor
 
 # Структура проекта 
+- Базовые настройки приложения производятся в Settings.config в WebUI проекте
 - Контекст базы данных ApplicationContext находится в SimpleBlog.DAL.Context
 - Контракты находятся в SimpleBlog.DAL.DataContracts
 - UnitOfWork находится в SimpleBlog.DAL.DataService

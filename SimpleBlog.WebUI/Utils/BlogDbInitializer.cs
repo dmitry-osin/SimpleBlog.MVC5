@@ -20,7 +20,47 @@ namespace SimpleBlog.WebUI.Utils
             {
                 InitDb(context);
             }
+            InitSettings(context);
             base.Seed(context);
+        }
+
+        private void InitSettings(ApplicationContext context)
+        {
+            var dateFormat = new Setting()
+            {
+                Name = "DateFormat",
+                Title = "Формат даты",
+                Value = XMLSettingsProvider.DateFormat
+            };
+
+            var blogName = new Setting()
+            {
+                Name = "BlogName",
+                Title = "Название блога",
+                Value = XMLSettingsProvider.BlogName
+            };
+
+            var persistenceTimeOfAuth = new Setting()
+            {
+                Name = "PersistenceTimeOfAuth",
+                Title = "Время жизни сессии",
+                Value = XMLSettingsProvider.PersistenceTimeOfAuth.ToString()
+            };
+
+
+            var postsPerPage = new Setting()
+            {
+                Name = "PostsPerPage",
+                Title = "Название блога",
+                Value = XMLSettingsProvider.PostsPerPage.ToString()
+            };
+
+            context.Settings.Add(dateFormat);
+            context.Settings.Add(blogName);
+            context.Settings.Add(persistenceTimeOfAuth);
+            context.Settings.Add(postsPerPage);
+
+            context.SaveChanges();
         }
 
         /// <summary>

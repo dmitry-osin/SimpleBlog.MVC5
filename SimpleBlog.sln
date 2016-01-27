@@ -12,24 +12,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleBlog.BLL", "SimpleBlog.BLL\SimpleBlog.BLL.csproj", "{2A0DCA32-C45E-49E9-810F-BE21D4D314F6}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 5
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://justz.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = SimpleBlog.BLL\\SimpleBlog.BLL.csproj
-		SccProjectName1 = SimpleBlog.BLL
-		SccLocalPath1 = SimpleBlog.BLL
-		SccProjectUniqueName2 = SimpleBlog.DAL\\SimpleBlog.DAL.csproj
-		SccProjectName2 = SimpleBlog.DAL
-		SccLocalPath2 = SimpleBlog.DAL
-		SccProjectUniqueName3 = SimpleBlog.Tests\\SimpleBlog.Tests.csproj
-		SccProjectName3 = SimpleBlog.Tests
-		SccLocalPath3 = SimpleBlog.Tests
-		SccProjectUniqueName4 = SimpleBlog.WebUI\\SimpleBlog.WebUI.csproj
-		SccProjectName4 = SimpleBlog.WebUI
-		SccLocalPath4 = SimpleBlog.WebUI
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU

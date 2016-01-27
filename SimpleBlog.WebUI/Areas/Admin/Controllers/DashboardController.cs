@@ -7,9 +7,9 @@ using System.Web.Mvc;
 namespace SimpleBlog.WebUI.Areas.Admin.Controllers
 {
     [Authorize]
-    public class AdminController : Controller
+    public class DashboardController : Controller
     {
-        // GET: Admin/Admin
+        // GET: Admin/Dashboard
         public ActionResult Index()
         {
             return View();

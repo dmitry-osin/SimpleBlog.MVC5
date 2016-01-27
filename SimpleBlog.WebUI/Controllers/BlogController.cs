@@ -10,6 +10,7 @@ using SimpleBlog.DAL.Context;
 using SimpleBlog.DAL.DataService;
 using SimpleBlog.DAL.Object_Model;
 using SimpleBlog.DAL.ViewModel;
+using SimpleBlog.WebUI.Utils;
 using WebGrease.Css.Extensions;
 
 namespace SimpleBlog.WebUI.Controllers
@@ -19,10 +20,13 @@ namespace SimpleBlog.WebUI.Controllers
     {
         private int _pageSize = 5;
         private UnitOfWork _unitOfWork;
+        private AppSettingsStore _settingsStore;
 
         public BlogController()
         {
+            _settingsStore = new AppSettingsStore();
             _unitOfWork = new UnitOfWork(ApplicationContext.Create());
+            _pageSize = int.Parse(_settingsStore.PostsPerPage.Value);
         }
 
         [Route("page/{page}")]

@@ -34,6 +34,13 @@ namespace SimpleBlog.WebUI.Controllers
             }
         }
 
+        private AppSettingsStore _settingsStore;
+
+        public AccountController()
+        {
+            _settingsStore = new AppSettingsStore();
+        }
+
 
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
@@ -61,7 +68,7 @@ namespace SimpleBlog.WebUI.Controllers
                     AuthenticationManager.SignIn(new AuthenticationProperties
                     {
                         IsPersistent = model.RememberMe,
-                        ExpiresUtc = DateTimeOffset.Now + new TimeSpan(0,0,XMLSettingsProvider.PersistenceTimeOfAuth,0)
+                        ExpiresUtc = DateTimeOffset.Now + new TimeSpan(0,0, int.Parse(_settingsStore.PersistenceTimeOfAuth.Value),0)
                     }, claim);
                     if (String.IsNullOrEmpty(returnUrl))
                         return RedirectToAction("AboutMe", "Home");

@@ -39,7 +39,7 @@ namespace SimpleBlog.WebUI.Areas.Admin.Controllers
             {
                 _unitOfWork.Settings.Update(model);
             }
-            return View();
+            return RedirectToRoute(new { area = "Admin", controller = "Setting", action = "List"});
         }
     }
 }

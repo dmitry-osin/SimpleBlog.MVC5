@@ -4,51 +4,41 @@ using SimpleBlog.DAL.Object_Model;
 
 namespace SimpleBlog.WebUI.Utils
 {
-    public class AppSettingsStore
+    public static class AppSettingsStore
     {
-        private UnitOfWork _unitOfWork;
+        private static UnitOfWork _unitOfWork;
 
-        public AppSettingsStore()
+        public static Setting GetDateFormat()
         {
-            _unitOfWork = new UnitOfWork(ApplicationContext.Create());
-        }
-
-        public Setting DateFormat
-        {
-            get { return _unitOfWork.Settings.GetByName("DateFormat"); }
-            set
+            using (_unitOfWork = new UnitOfWork(ApplicationContext.Create()))
             {
-                _unitOfWork.Settings.Update(value);
+                return _unitOfWork.Settings.GetByName("DateFormat");
+            }
+        }
+        
+        public static Setting GetBlogName()
+        {
+            using (_unitOfWork = new UnitOfWork(ApplicationContext.Create()))
+            {
+                return _unitOfWork.Settings.GetByName("BlogName");
             }
         }
 
 
-        public Setting BlogName
+        public static Setting GetPersistenceTimeOfAuth()
         {
-            get { return _unitOfWork.Settings.GetByName("BlogName"); }
-            set
+            using (_unitOfWork = new UnitOfWork(ApplicationContext.Create()))
             {
-                _unitOfWork.Settings.Update(value);
+                return _unitOfWork.Settings.GetByName("PersistenceTimeOfAuth");
             }
         }
 
 
-        public Setting PersistenceTimeOfAuth
+        public static Setting GetPostsPerPage()
         {
-            get { return _unitOfWork.Settings.GetByName("PersistenceTimeOfAuth"); }
-            set
+            using (_unitOfWork = new UnitOfWork(ApplicationContext.Create()))
             {
-                _unitOfWork.Settings.Update(value);
-            }
-        }
-
-
-        public Setting PostsPerPage
-        {
-            get { return _unitOfWork.Settings.GetByName("PostsPerPage"); }
-            set
-            {
-                _unitOfWork.Settings.Update(value);
+                return _unitOfWork.Settings.GetByName("PostsPerPage");
             }
         }
     }

@@ -20,13 +20,11 @@ namespace SimpleBlog.WebUI.Controllers
     {
         private int _pageSize = 5;
         private UnitOfWork _unitOfWork;
-        private AppSettingsStore _settingsStore;
-
+        
         public BlogController()
         {
-            _settingsStore = new AppSettingsStore();
             _unitOfWork = new UnitOfWork(ApplicationContext.Create());
-            _pageSize = int.Parse(_settingsStore.PostsPerPage.Value);
+            _pageSize = int.Parse(AppSettingsStore.GetPostsPerPage().Value);
         }
 
         [Route("page/{page}")]

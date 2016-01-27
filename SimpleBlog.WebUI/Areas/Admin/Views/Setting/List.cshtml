@@ -1,14 +1,13 @@
 ﻿@model IEnumerable<SimpleBlog.DAL.Object_Model.Setting>
 
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "Настройки";
 }
 
-<h2>List</h2>
+<h2><i class="fa fa-cog"></i> Настройки</h2>
+<br/>
+<br/>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -29,10 +28,7 @@
             @Html.DisplayFor(modelItem => item.Value)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
-        </td>
+        <a href="@Url.Action("Edit", "Setting", new { id = item.Id })"> <i class="fa fa-pencil"></i></a></td>
     </tr>
 }
 

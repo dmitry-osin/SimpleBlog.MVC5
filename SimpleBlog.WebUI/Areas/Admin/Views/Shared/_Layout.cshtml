@@ -3,9 +3,12 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
+    
+    <title>@ViewBag.Title - Админ панель</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="icon" href="~/Content/Images/favicon-cog.ico">
 </head>
 <body>
     <nav class="navbar navbar-default navbar-inverse">
@@ -24,15 +27,13 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="@Url.Action("Index","Admin")"><i class="fa fa-tachometer"></i> Панель управления</a></li>
-                    <li><a href="@Url.Action("Posts","PostManage")"><i class="fa fa-sticky-note-o"></i> Записи</a></li>
+                    <li><a href="@Url.Action("Posts","Blog", new {area = "", page = 1})"><i class="fa fa-home"></i> На главную</a></li>
+                    <li><a href="@Url.Action("Index", "Admin")"><i class="fa fa-tachometer"></i> Панель управления</a></li>
+                    <li><a href="@Url.Action("Posts", "PostManage")"><i class="fa fa-sticky-note-o"></i> Записи</a></li>
                     <li><a href="#"><i class="fa fa-tag"></i> Теги</a></li>
                 </ul>
-                <ul class="nav navbar-nav">
-                    <li><a href="#"><i class="fa fa-user"></i> Вы вошли как @User.Identity.Name</a></li>
-                </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="@Url.Action("Posts","Blog", new {area = "", page = 1})"><i class="fa fa-home"></i> На главную</a></li>
+                    <li><a href="#"><i class="fa fa-user"></i> Вы вошли как @User.Identity.Name</a></li>
                     <li><a href="@Url.Action("LogOff","Account")"><i class="fa fa-times-circle-o"></i> Выход</a></li>
                 </ul>
             </div><!-- /.navbar-collapse -->

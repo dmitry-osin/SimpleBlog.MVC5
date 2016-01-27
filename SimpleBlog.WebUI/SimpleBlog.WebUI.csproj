@@ -223,6 +223,8 @@
     </Content>
     <Content Include="Areas\Admin\Views\Tag\Tags.cshtml" />
     <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\List.cshtml" />
+    <Content Include="Areas\Admin\Views\Setting\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\Smarterasp.net.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
@@ -416,6 +418,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
+    <Compile Include="Areas\Admin\Controllers\SettingController.cs" />
     <Compile Include="Utils\AppSettingsStore.cs" />
     <Compile Include="Utils\XMLSettingsProvider.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />

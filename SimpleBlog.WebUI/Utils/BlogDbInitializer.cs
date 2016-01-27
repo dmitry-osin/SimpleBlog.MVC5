@@ -51,7 +51,7 @@ namespace SimpleBlog.WebUI.Utils
             var postsPerPage = new Setting()
             {
                 Name = "PostsPerPage",
-                Title = "Название блога",
+                Title = "Записей на страницу",
                 Value = XMLSettingsProvider.PostsPerPage.ToString()
             };
 

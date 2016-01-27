@@ -1,4 +1,7 @@
-﻿using SimpleBlog.DAL.Context;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using SimpleBlog.DAL.Context;
 using SimpleBlog.DAL.DataContracts;
 using SimpleBlog.DAL.Object_Model;
 
@@ -13,14 +16,26 @@ namespace SimpleBlog.DAL.Repository
             _context = context;
         }
 
+
         public void Update(Setting entity)
         {
-            throw new System.NotImplementedException();
+            _context.Entry(entity).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
-        public Setting Read()
+        public Setting GetById(int id)
         {
-            throw new System.NotImplementedException();
+            return _context.Settings.Find(id);
+        }
+
+        public Setting GetByName(string name)
+        {
+            return _context.Settings.FirstOrDefault(x => x.Name == name);
+        }
+
+        public IEnumerable<Setting> GetAll()
+        {
+            return _context.Settings.ToList();
         }
     }
 }

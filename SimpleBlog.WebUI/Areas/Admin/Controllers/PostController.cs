@@ -14,11 +14,11 @@ using SimpleBlog.DAL.ViewModel;
 namespace SimpleBlog.WebUI.Areas.Admin.Controllers
 {
     [Authorize]
-    public class PostManageController : Controller
+    public class PostController : Controller
     {
         private UnitOfWork _unitOfWork;
 
-        public PostManageController()
+        public PostController()
         {
             _unitOfWork = new UnitOfWork(ApplicationContext.Create());
         }
@@ -88,7 +88,7 @@ namespace SimpleBlog.WebUI.Areas.Admin.Controllers
 
                 return RedirectToRoute(new { area = "", controller = "Blog", action = "Details", url = model.UrlSlug });
             }
-            return RedirectToRoute(new { area = "Admin", controller = "PostManage", action = "Posts" });
+            return RedirectToRoute(new { area = "Admin", controller = "Post", action = "Posts" });
         }
 
         [HttpGet]

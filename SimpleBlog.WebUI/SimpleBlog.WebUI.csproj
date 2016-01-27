@@ -197,8 +197,8 @@
     <Content Include="Areas\Admin\Views\web.config" />
     <Content Include="Areas\Admin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\Admin\Views\Shared\_Layout.cshtml" />
-    <Content Include="Areas\Admin\Views\PostManage\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\PostManage\Posts.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Posts.cshtml" />
     <Content Include="Content\TestTemplate\_variables.less" />
     <Content Include="Content\TestTemplate\_override.less" />
     <Content Include="Content\TestTemplate\styles.less" />
@@ -216,8 +216,8 @@
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
-    <Content Include="Areas\Admin\Views\PostManage\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\PostManage\Remove.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Post\Remove.cshtml" />
     <Content Include="connections.config">
       <SubType>Designer</SubType>
     </Content>
@@ -420,7 +420,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
-    <Compile Include="Areas\Admin\Controllers\PostManageController.cs" />
+    <Compile Include="Areas\Admin\Controllers\PostController.cs" />
     <Compile Include="Areas\Admin\Controllers\TagManageController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BlogController.cs" />

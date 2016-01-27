@@ -14,7 +14,7 @@
 
         @if (User.Identity.IsAuthenticated)
         {
-            @Html.ActionLink("Редактировать", "Edit", new { area = "Admin", controller = "PostManage", action = "Edit", id = Model.Id })
+            @Html.ActionLink("Редактировать", "Edit", new { area = "Admin", controller = "Post", action = "Edit", id = Model.Id })
         }
     </div>
 </div>

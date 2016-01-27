@@ -44,7 +44,7 @@
                 @Html.DisplayFor(modelItem => item.PublishDate)
             </td>
             <td>
-                <a href="@Url.Action("Edit", "PostManage", new {id = item.Id})"><i class="fa fa-pencil"></i></a>
+                <a href="@Url.Action("Edit", "Post", new {id = item.Id})"><i class="fa fa-pencil"></i></a>
 
             </td>
             <td>
@@ -52,7 +52,7 @@
 
             </td>
             <td>
-                <a href="@Url.Action("Remove", "PostManage", new {id = item.Id})"><i class="fa fa-trash"></i></a>
+                <a href="@Url.Action("Remove", "Post", new {id = item.Id})"><i class="fa fa-trash"></i></a>
             </td>
         </tr>
     }

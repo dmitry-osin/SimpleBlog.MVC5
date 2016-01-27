@@ -1,9 +1,8 @@
-﻿using System;
-using System.Configuration;
+﻿using System.Configuration;
 
-namespace SimpleBlog.WebUI
+namespace SimpleBlog.WebUI.Utils
 {
-    public static class SettingsProvider
+    public static class XMLSettingsProvider
     {
         /// <summary>
         /// Gets the date format.

@@ -11,6 +11,7 @@ using Microsoft.Owin.Security;
 using SimpleBlog.DAL.Identity;
 using SimpleBlog.DAL.Object_Model;
 using SimpleBlog.DAL.ViewModel;
+using SimpleBlog.WebUI.Utils;
 
 namespace SimpleBlog.WebUI.Controllers
 {
@@ -60,7 +61,7 @@ namespace SimpleBlog.WebUI.Controllers
                     AuthenticationManager.SignIn(new AuthenticationProperties
                     {
                         IsPersistent = model.RememberMe,
-                        ExpiresUtc = DateTimeOffset.Now + new TimeSpan(0,0,SettingsProvider.PersistenceTimeOfAuth,0)
+                        ExpiresUtc = DateTimeOffset.Now + new TimeSpan(0,0,XMLSettingsProvider.PersistenceTimeOfAuth,0)
                     }, claim);
                     if (String.IsNullOrEmpty(returnUrl))
                         return RedirectToAction("AboutMe", "Home");

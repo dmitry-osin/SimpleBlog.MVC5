@@ -16,7 +16,7 @@ namespace SimpleBlog.WebUI.Utils
         /// <param name="context">The context.</param>
         protected override void Seed(ApplicationContext context)
         {
-            if (SettingsProvider.IsInitDb)
+            if (XMLSettingsProvider.IsInitDb)
             {
                 InitDb(context);
             }
@@ -55,11 +55,11 @@ namespace SimpleBlog.WebUI.Utils
             var passwordHash = new PasswordHasher();
             ApplicationUser user = new ApplicationUser()
             {
-                Email = SettingsProvider.DefaultUserEmail,
+                Email = XMLSettingsProvider.DefaultUserEmail,
                 EmailConfirmed = true,
-                UserName = SettingsProvider.DefaultUser,
-                FullName = SettingsProvider.DefaultUserFullName,
-                PasswordHash = passwordHash.HashPassword(SettingsProvider.DefaultUserPassword),
+                UserName = XMLSettingsProvider.DefaultUser,
+                FullName = XMLSettingsProvider.DefaultUserFullName,
+                PasswordHash = passwordHash.HashPassword(XMLSettingsProvider.DefaultUserPassword),
                 SecurityStamp = Guid.NewGuid().ToString(),
                 Tags = new List<Tag>()
                 {

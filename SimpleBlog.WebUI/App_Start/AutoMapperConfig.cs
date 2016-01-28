@@ -16,6 +16,7 @@ namespace SimpleBlog.WebUI
         {
             Mapper.CreateMap<Post, PostViewModel>().ReverseMap();
             Mapper.CreateMap<Tag, TagViewModel>().ReverseMap();
+            Mapper.CreateMap<ApplicationUser, UserViewModel>().ReverseMap();
         } 
     }
 }

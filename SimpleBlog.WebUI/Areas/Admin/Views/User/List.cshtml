@@ -1,0 +1,47 @@
+﻿@model IEnumerable<SimpleBlog.DAL.ViewModel.UserViewModel>
+
+@{
+    ViewBag.Title = "Пользователи";
+}
+
+<h2>Пользователи</h2>
+<br />
+<br />
+<p>
+    <i class="fa fa-plus"></i> @Html.ActionLink("Добавить пользователя", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UserName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserName)
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", new {id = item.Id})"><i class="fa fa-pencil"></i></a>
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", new {id = item.Id})"><i class="fa fa-remove"></i></a>
+        </td>
+    </tr>
+}
+
+</table>

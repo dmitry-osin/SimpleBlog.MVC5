@@ -22,17 +22,20 @@
 - UnitOfWork находится в SimpleBlog.DAL.DataService
 - ApplicationUserManager находится в SimpleBlog.DAL.Identity
 - Объектные модели находятся в SimpleBlog.DAL.Object_Model
-- ViewModel'и находятся в SimpleBlog.DAL.Object_Model и мапятся через AutoMapper
+- ViewModel'и находятся в SimpleBlog.DAL.ViewModel и мапятся через AutoMapper
 - Конфиг AutoMapperConfig Находится в SimpleBlog.WebUI.App_Start
 - Репозитории находятся в SimpleBlog.DAL.Repository и регистрируются в UnitOfWork согласно шаблону проектирования
 - Инициализация базы данных BlogDbInitializer находится в SimpleBlog.DAL.Utils и регистрируется в Global.asax
+- Инициализация настроек из Settings.config через XMLSettingsProvider находится в SimpleBlog.DAL.Utils
+- Сервис работы с настройками AppSettingsStore находится в SimpleBlog.DAL.Utils, работает через UnitOfWork (Репозиторий SettingsRepository, контракт ISettingsRepository)
 - Регистрация компонентов Identity производится через файл запуска OWIN Startup.Auth, который находится в SimpleBlog.WebUI.App_Start
+- Редактирование пользователя
 
 # Реализовано
 - Добавление, удаление, изменение записей
-- Добавление, удаление пользователей (без UI)
-- Добавление , удаление, изменение тегов (без UI)
+- Редактирование пользователей
+- Редактирование настроек
 - Добавлен TinyMCE
-- Добавлен Pretty для подсветки кода
+- Добавлен Prettify для подсветки кода
 
 

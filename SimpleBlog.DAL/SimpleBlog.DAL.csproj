@@ -101,6 +101,7 @@
     <Compile Include="DataContracts\IUnitOfWork.cs" />
     <Compile Include="DataService\UnitOfWork.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
+    <Compile Include="Object Model\ApplicationRole.cs" />
     <Compile Include="Object Model\ApplicationUser.cs" />
     <Compile Include="Object Model\Post.cs" />
     <Compile Include="Object Model\Setting.cs" />

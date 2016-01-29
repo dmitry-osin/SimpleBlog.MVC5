@@ -42,7 +42,7 @@ namespace SimpleBlog.WebUI.Controllers
                     PostsPerPage = _pageSize,
                     TotalPosts = posts.Count
                 },
-                PostViewModels = posts.Select(Mapper.Map<Post, PostViewModel>).OrderBy(p => p.Id).Skip((page - 1) * _pageSize).Take(_pageSize).ToList()
+                PostViewModels = posts.Select(Mapper.Map<Post, PostViewModel>).OrderByDescending(p => p.PublishDate).Skip((page - 1) * _pageSize).Take(_pageSize).ToList()
             };
             return View(model);
         }

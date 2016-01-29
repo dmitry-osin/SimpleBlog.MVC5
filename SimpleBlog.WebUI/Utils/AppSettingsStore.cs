@@ -41,5 +41,13 @@ namespace SimpleBlog.WebUI.Utils
                 return _unitOfWork.Settings.GetByName("PostsPerPage");
             }
         }
+
+        public static Setting GetDefaultUserRole()
+        {
+            using (_unitOfWork = new UnitOfWork(ApplicationContext.Create()))
+            {
+                return _unitOfWork.Settings.GetByName("DefaultUserRole");
+            }
+        }
     }
 }

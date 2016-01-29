@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Data.Entity.Migrations;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 using SimpleBlog.DAL.Context;
+using SimpleBlog.DAL.Identity;
 using SimpleBlog.DAL.Object_Model;
 
 namespace SimpleBlog.WebUI.Utils
@@ -111,13 +113,34 @@ namespace SimpleBlog.WebUI.Utils
                 }
             };
 
+            var roleAdmin = new ApplicationRole()
+            {
+                Name = XMLSettingsProvider.DefaultUserRole,
+                Description = "Группа с высшими правами",
+            };
+
+            var roleEditor = new ApplicationRole()
+            {
+                Name = "editor",
+                Description = "Группа с правами на правку записей",
+            };
+            var userManager = new ApplicationUserManager(new UserStore<ApplicationUser>(context));
+
+            var roleManager = new RoleManager<ApplicationRole>(new RoleStore<ApplicationRole>(context));
+            roleManager.Create(roleAdmin);
+            roleManager.Create(roleEditor);
 
             post.Author = user;
             tag.Author = user;
 
-            context.Users.AddOrUpdate(applicationUser => applicationUser.Email, user);
+//            context.Users.AddOrUpdate(applicationUser => applicationUser.Email, user);
             context.Posts.Add(post);
 
+            var result = userManager.Create(user);
+            if (result.Succeeded)
+            {
+                userManager.AddToRole(user.Id, roleAdmin.Name);
+            }
             context.SaveChanges();
         }
     }

@@ -102,5 +102,10 @@ namespace SimpleBlog.WebUI.Utils
         {
             get { return ConfigurationManager.AppSettings["DefaultUserPassword"]; }
         }
+
+        public static string DefaultUserRole
+        {
+            get { return ConfigurationManager.AppSettings["DefaultUserRole"]; }
+        }
     }
 }

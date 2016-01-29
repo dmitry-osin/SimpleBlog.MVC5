@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
+using Microsoft.AspNet.Identity;
 using SimpleBlog.DAL.Context;
 using SimpleBlog.DAL.DataService;
 using SimpleBlog.DAL.Object_Model;
@@ -53,6 +54,9 @@ namespace SimpleBlog.WebUI.Areas.Admin.Controllers
                 }
                 else
                 {
+                    // TODO: Стремное решение
+
+                    model.Author = _unitOfWork.DataContext.Users.Find(User.Identity.GetUserId());
                     _unitOfWork.Posts.Add(Mapper.Map<PostViewModel, Post>(model));
                     _unitOfWork.Save();
                     return RedirectToRoute(new { area = "", controller = "Blog", action = "Details", url = model.UrlSlug });

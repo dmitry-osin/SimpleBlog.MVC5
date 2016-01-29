@@ -100,6 +100,7 @@
     <Compile Include="DataContracts\ITagRepository.cs" />
     <Compile Include="DataContracts\IUnitOfWork.cs" />
     <Compile Include="DataService\UnitOfWork.cs" />
+    <Compile Include="Identity\ApplicationRoleManager.cs" />
     <Compile Include="Identity\ApplicationUserManager.cs" />
     <Compile Include="Object Model\ApplicationRole.cs" />
     <Compile Include="Object Model\ApplicationUser.cs" />

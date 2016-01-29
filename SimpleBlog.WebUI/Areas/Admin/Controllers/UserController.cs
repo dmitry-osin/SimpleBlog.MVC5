@@ -14,7 +14,7 @@ using SimpleBlog.DAL.ViewModel;
 
 namespace SimpleBlog.WebUI.Areas.Admin.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "admin")]
     public class UserController : Controller
     {
         private UnitOfWork _unitOfWork;

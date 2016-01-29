@@ -9,7 +9,7 @@ using SimpleBlog.DAL.Object_Model;
 
 namespace SimpleBlog.WebUI.Areas.Admin.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "admin")]
     public class SettingController : Controller
     {
         private UnitOfWork _unitOfWork;

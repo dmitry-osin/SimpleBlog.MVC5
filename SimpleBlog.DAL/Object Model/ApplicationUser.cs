@@ -30,6 +30,7 @@ namespace SimpleBlog.DAL.Object_Model
         }
 
         public string FullName { get; set; }
+        public string NewPassword { get; set; }
         public virtual ICollection<Post> Posts { get; set; } 
         public virtual ICollection<Tag> Tags { get; set; } 
     }

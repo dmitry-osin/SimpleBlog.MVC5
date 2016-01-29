@@ -9,6 +9,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using SimpleBlog.DAL.Context;
 using SimpleBlog.DAL.DataService;
+using SimpleBlog.DAL.Identity;
 using SimpleBlog.DAL.Object_Model;
 using SimpleBlog.DAL.ViewModel;
 
@@ -51,9 +52,14 @@ namespace SimpleBlog.WebUI.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
+                var passwordHash = new PasswordHasher();
+                if (!string.IsNullOrWhiteSpace(model.NewPassword))
+                {
+                    model.PasswordHash = passwordHash.HashPassword(model.NewPassword);
+                }
                 _unitOfWork.DataContext.Entry(model).State = EntityState.Modified;
                 _unitOfWork.Save();
-                return RedirectToAction("LogOff", "Account", new {@area = ""});
+                return RedirectToAction("LogOff", "Account", new { @area = "" });
             }
             return RedirectToAction("List");
         }

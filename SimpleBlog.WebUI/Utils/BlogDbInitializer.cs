@@ -26,6 +26,10 @@ namespace SimpleBlog.WebUI.Utils
             base.Seed(context);
         }
 
+        /// <summary>
+        /// Initializes the settings.
+        /// </summary>
+        /// <param name="context">The context.</param>
         private void InitSettings(ApplicationContext context)
         {
             var dateFormat = new Setting()

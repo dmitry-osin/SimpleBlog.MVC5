@@ -10,7 +10,7 @@
         <div class="row post-entry">
             <div class="col-md-8 col-xs-10 col-sm-10 col-md-offset-2 col-xs-offset-1 col-sm-offset-1">
                 <a href="@Url.Action("Details", new {url = post.UrlSlug})" class="post-entry-title">
-                    <h1 align="center">Есть много вариантов Lorem Ipsum, но большинство из них имеет не всегда приемлемые модификациим</h1>
+                    <h1 align="center">@post.Title</h1>
                 </a>
                 <hr style="margin-bottom: 5px;"/>
                 <p align="center" style="text-transform: uppercase;">Дата публикации <i class="fa fa-calendar-o"></i>: @post.PublishDate.Date.ToString(SettingsProvider.DateFormat) / Автор <i class="fa fa-user"></i>: @post.Author.FullName

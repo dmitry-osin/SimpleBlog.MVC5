@@ -1,6 +1,10 @@
 # SimpleBlog
 Опыт написания блога на ASP.NET MVC5, Identity 2, EF6.1, Bootstrap, Less
 
+Потрогать можно тут:
+- сайт http://demo.osin.pw/
+- админка http://demo.osin.pw/admin/
+
 # Компоненты
 В проекте используется:
 - ASP.NET MVC5

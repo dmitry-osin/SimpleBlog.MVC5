@@ -63,5 +63,35 @@ namespace SimpleBlog.WebUI.Areas.Admin.Controllers
             }
             return RedirectToAction("List");
         }
+
+        [HttpGet]
+        public ActionResult Remove(string id)
+        {
+            if (_unitOfWork.DataContext.Users.Count() > 1)
+            {
+                var user = _unitOfWork.DataContext.Users.Find(id);
+                if (user != null)
+                {
+                    return View(user);
+                }
+                ModelState.AddModelError("OnlyOneUser", "В системе есть только один пользователь. Удаление невозможно");
+                return RedirectToAction("List");
+            }
+            return RedirectToAction("List");
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Remove(ApplicationUser model)
+        {
+            if (ModelState.IsValid)
+            {
+                _unitOfWork.DataContext.Entry(model).State = EntityState.Deleted;
+                _unitOfWork.Save();
+                return RedirectToAction("List");
+            }
+            return RedirectToAction("List");
+        }
     }
 }

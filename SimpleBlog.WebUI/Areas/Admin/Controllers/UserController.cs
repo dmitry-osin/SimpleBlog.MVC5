@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using AutoMapper;
@@ -92,6 +93,48 @@ namespace SimpleBlog.WebUI.Areas.Admin.Controllers
                 return RedirectToAction("List");
             }
             return RedirectToAction("List");
+        }
+
+
+        [HttpGet]
+        public ActionResult Add()
+        {
+            return View(new UserViewModel());
+        }
+
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Add(UserViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(_unitOfWork.DataContext));
+
+                var user = new ApplicationUser()
+                {
+                    UserName = model.UserName,
+                    Email = model.Email,
+                    EmailConfirmed = true,
+                    FullName = model.FullName
+                };
+
+                var roleManager = new RoleManager<ApplicationRole>(new RoleStore<ApplicationRole>(_unitOfWork.DataContext));
+
+                var role = await roleManager.FindByNameAsync("roleAdmin");
+                var result = await manager.CreateAsync(user, model.PasswordHash);
+                if (result.Succeeded && role != null)
+                {
+                    manager.AddToRole(user.Id, role.Name);
+                }
+                else
+                {
+                    throw new NullReferenceException();
+                }
+
+                return RedirectToAction("List");
+            }
+            return HttpNotFound();
         }
     }
 }

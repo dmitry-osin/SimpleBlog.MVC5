@@ -228,6 +228,7 @@
     <Content Include="Areas\Admin\Views\User\List.cshtml" />
     <Content Include="Areas\Admin\Views\User\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\User\Remove.cshtml" />
+    <Content Include="Areas\Admin\Views\User\Add.cshtml" />
     <None Include="Properties\PublishProfiles\demo.d-osin.ru.pubxml" />
     <None Include="Properties\PublishProfiles\Smarterasp.net.pubxml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />

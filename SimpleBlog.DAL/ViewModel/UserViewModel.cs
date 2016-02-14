@@ -29,7 +29,6 @@ namespace SimpleBlog.DAL.ViewModel
         [Display(Name = "Пароль")]
         public string PasswordHash { get; set; }
 
-        [Required]
         [DataType(DataType.Text)]
         [Display(Name = "Штапм безопасности")]
         public string SecurityStamp { get; set; }

@@ -75,6 +75,9 @@ body {
   color: white;
   background-color: #53a1b8;
 }
+.i {
+  color: #53a1b8;
+}
 #logo {
   min-width: 200px;
   max-width: 280px;

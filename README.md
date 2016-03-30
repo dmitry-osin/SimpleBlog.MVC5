@@ -1,9 +1,9 @@
 # SimpleBlog
 Опыт написания блога на ASP.NET MVC5, Identity 2, EF6.1, Bootstrap, Less
 
-Потрогать можно тут:
-- сайт http://demo.osin.pw/
-- админка http://demo.osin.pw/admin/
+http://dmitryalexosin-001-site1.btempurl.com/ сайт, 
+http://dmitryalexosin-001-site1.btempurl.com/admin админка, 
+логин demo, пароль demo
 
 # Компоненты
 В проекте используется:

@@ -4,7 +4,8 @@
 # Потрогать можно тут:
 - http://dmitryalexosin-001-site1.btempurl.com/ сайт, 
 - http://dmitryalexosin-001-site1.btempurl.com/admin админка, 
-логин demo, пароль demo
+- логин demo, 
+- пароль demo
 
 # Компоненты
 В проекте используется:

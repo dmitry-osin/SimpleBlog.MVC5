@@ -1,8 +1,9 @@
 # SimpleBlog
 Опыт написания блога на ASP.NET MVC5, Identity 2, EF6.1, Bootstrap, Less
 
-http://dmitryalexosin-001-site1.btempurl.com/ сайт, 
-http://dmitryalexosin-001-site1.btempurl.com/admin админка, 
+# Потрогать можно тут:
+- http://dmitryalexosin-001-site1.btempurl.com/ сайт, 
+- http://dmitryalexosin-001-site1.btempurl.com/admin админка, 
 логин demo, пароль demo
 
 # Компоненты

@@ -4,7 +4,7 @@
 # Потрогать можно тут:
 - http://dmitryalexosin-001-site1.btempurl.com/ сайт, 
 - http://dmitryalexosin-001-site1.btempurl.com/admin админка, 
-- так же тут
+так же тут
 - http://demo-osin.azurewebsites.net/ сайт
 - http://demo-osin.azurewebsites.net/admin админка
 

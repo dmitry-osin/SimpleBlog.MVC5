@@ -8,7 +8,7 @@ namespace SimpleBlog.DAL.Repository
 {
     public class TagRepository
     {
-        private ApplicationContext _context;
+        private readonly ApplicationContext _context;
 
         public TagRepository(ApplicationContext context)
         {
@@ -21,7 +21,10 @@ namespace SimpleBlog.DAL.Repository
         /// <param name="entity">The entity.</param>
         public void Add(Tag entity)
         {
-            _context.Entry(entity).State = EntityState.Added;
+            lock (_context)
+            {
+                _context.Entry(entity).State = EntityState.Added;
+            }
         }
 
         /// <summary>
@@ -30,7 +33,10 @@ namespace SimpleBlog.DAL.Repository
         /// <param name="entity">The entity.</param>
         public void Update(Tag entity)
         {
-            _context.Entry(entity).State = EntityState.Modified;
+            lock (_context)
+            {
+                _context.Entry(entity).State = EntityState.Modified;
+            }
         }
 
         /// <summary>
@@ -39,7 +45,10 @@ namespace SimpleBlog.DAL.Repository
         /// <param name="entity">The entity.</param>
         public void Remove(Tag entity)
         {
-            _context.Entry(entity).State = EntityState.Deleted;
+            lock (_context)
+            {
+                _context.Entry(entity).State = EntityState.Deleted;
+            }
         }
 
         /// <summary>

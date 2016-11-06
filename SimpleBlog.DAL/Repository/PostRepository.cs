@@ -13,7 +13,7 @@ namespace SimpleBlog.DAL.Repository
     /// <seealso cref="SimpleBlog.DAL.DataContracts.IPostRepository" />
     public class PostRepository : IPostRepository
     {
-        private ApplicationContext _context;
+        private readonly ApplicationContext _context;
 
         public PostRepository(ApplicationContext context)
         {
@@ -26,7 +26,10 @@ namespace SimpleBlog.DAL.Repository
         /// <param name="entity">The entity.</param>
         public void Add(Post entity)
         {
-            _context.Entry(entity).State = EntityState.Added;
+            lock (_context)
+            {
+                _context.Entry(entity).State = EntityState.Added;
+            }
         }
 
         /// <summary>
@@ -35,7 +38,10 @@ namespace SimpleBlog.DAL.Repository
         /// <param name="entity">The entity.</param>
         public void Update(Post entity)
         {
-            _context.Entry(entity).State = EntityState.Modified;
+            lock (_context)
+            {
+                _context.Entry(entity).State = EntityState.Modified;
+            }
         }
 
         /// <summary>
@@ -44,7 +50,10 @@ namespace SimpleBlog.DAL.Repository
         /// <param name="entity">The entity.</param>
         public void Remove(Post entity)
         {
-            _context.Entry(entity).State = EntityState.Deleted;
+            lock (_context)
+            {
+                _context.Entry(entity).State = EntityState.Deleted;
+            }
         }
 
         /// <summary>

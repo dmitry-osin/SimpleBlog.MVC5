@@ -9,7 +9,7 @@ namespace SimpleBlog.DAL.Repository
 {
     public class SettingRepository : ISettingRepository<Setting>
     {
-        private ApplicationContext _context;
+        private readonly ApplicationContext _context;
 
         public SettingRepository(ApplicationContext context)
         {
@@ -19,8 +19,11 @@ namespace SimpleBlog.DAL.Repository
 
         public void Update(Setting entity)
         {
-            _context.Entry(entity).State = EntityState.Modified;
-            _context.SaveChanges();
+            lock (_context)
+            {
+                _context.Entry(entity).State = EntityState.Modified;
+                _context.SaveChanges();
+            }
         }
 
         public Setting GetById(int id)

@@ -1,15 +1,19 @@
 # SimpleBlog
+
 Опыт написания блога на ASP.NET MVC5, Identity 2, EF6.1, Bootstrap, Less
 
 # Потрогать можно тут:
-- http://demo-osin.azurewebsites.net/ сайт
-- http://demo-osin.azurewebsites.net/admin админка
 
-- логин demo, 
-- пароль demo
+- ~~http://demo-osin.azurewebsites.net/ сайт~~
+- ~~http://demo-osin.azurewebsites.net/admin админка~~
+
+- ~~логин demo,~~ 
+- ~~пароль demo~~
 
 # Компоненты
+
 В проекте используется:
+
 - ASP.NET MVC5
 - Identity 2
 - EF 6
@@ -23,6 +27,7 @@
 - TinyMCE Editor
 
 # Структура проекта 
+
 - Базовые настройки приложения производятся в Settings.config в WebUI проекте
 - Контекст базы данных ApplicationContext находится в SimpleBlog.DAL.Context
 - Контракты находятся в SimpleBlog.DAL.DataContracts
@@ -39,10 +44,9 @@
 - Редактирование пользователя
 
 # Реализовано
+
 - Добавление, удаление, изменение записей
 - Редактирование пользователей
 - Редактирование настроек
 - Добавлен TinyMCE
 - Добавлен Prettify для подсветки кода
-
-
